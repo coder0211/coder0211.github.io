@@ -1,98 +1,104 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="bumbii">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <title>bumbii</title>
-  <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/ic_rel.png">
+    <title>Personal information</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    var serviceWorkerVersion = '1785592300';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
 
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+<body class="is-preload">
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
-  </script>
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
+
+        <!-- One -->
+        <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <center>
+                    <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+                </center>
+                <h1>Nguyen Duc Hoa</h1>
+                <p class="major">I want to become a mobile programmer, I am currently a 2nd-year student at a university in Ho Chi Minh City and am working on a front-end mobile app for an outsourcing company.</p>
+                <p>I can use GitHub, Linux,...</p>
+                <ul class="actions stacked">
+                    <li><a href="#first" class="button big wide smooth-scroll-middle">Explore</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="images/banner.jpg" alt="" />
+            </div>
+        </section>
+
+        <!-- Two -->
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+            <div class="content">
+                <h2>Flutter</h2>
+                <p>I have 6 month of flutter experience and have been involved in a few real-world projects.</p>
+                <!-- Action -->
+                <!-- <ul class="actions stacked">
+								<li><a href="#second" class="button big wide smooth-scroll-middle">Explore</a></li>
+							</ul> -->
+            </div>
+            <div class="image">
+                <img src="images/flutter_logo.png" alt="" />
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <h2>Android kotlin</h2>
+                <p>Currently I am learning android using kotlin.</p>
+            </div>
+            <div class="image">
+                <img src="images/android_kotlin_logo.jpeg" alt="" />
+            </div>
+        </section>
+
+        <!-- Four -->
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <h2>C/C++, Java and Python</h2>
+                <p>These are the programming languages that I use a lot, i used them to learn algorithms, learn object-oriented programming, and like many other things, it also gave me the foundation to have. Can learn many other things.</p>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="wrapper style1 align-center">
+            <div class="inner">
+                <ul class="icons">
+                    <b>
+                        <h3>
+                            If you have trouble learning to code, you can contact me and I will help you as much as possible.
+                        </h3>
+                    </b>
+                    <li><a href="https://www.facebook.com/nguyenhoa0211/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="mailto:nguyenduchoa.data@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>

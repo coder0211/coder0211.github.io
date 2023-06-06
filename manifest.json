@@ -1,11 +1,11 @@
 {
-    "name": "silky",
-    "short_name": "silky",
+    "name": "hasaki_chat_customer",
+    "short_name": "HSKChatCustomer",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Chat customer",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

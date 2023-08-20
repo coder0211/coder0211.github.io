@@ -1,11 +1,11 @@
 {
-    "name": "hasaki_chat_customer",
-    "short_name": "HSKChatCustomer",
+    "name": "ecom_tt",
+    "short_name": "ecom_tt",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Chat customer",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
